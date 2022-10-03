@@ -1,0 +1,1 @@
+Actualizar símbolo LM393_1 de 'Connector_Generic:Conn_01x04' a 'Connector_Generic:Conn_01x04': OK
