@@ -379,6 +379,7 @@
         "microvia_drill": 0.1,
         "name": "information",
         "nets": [
+          "/Adicional",
           "/Botones",
           "/Buzzer",
           "/C_hum",
@@ -392,7 +393,6 @@
           "/ControlV5",
           "/Echo",
           "/Esp32Schematic/BOOT",
-          "/Esp32Schematic/IO19",
           "/LedU1",
           "/Led_Verde",
           "/Prog_Rx",
@@ -406,12 +406,8 @@
           "/lm393_1_D",
           "3.3v",
           "GND",
-          "Net-(Buzzer1-Pad2)",
           "Net-(C1-Pad2)",
           "Net-(L_p1-Pad2)",
-          "Net-(LedRojo1-Pad1)",
-          "Net-(LedVerde1-Pad1)",
-          "Net-(Q1-Pad1)",
           "SCL",
           "SDA"
         ],
