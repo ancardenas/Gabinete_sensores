@@ -17,6 +17,6 @@ void soil_humidity(void *pvParameters){
             printf("Sin humedad\n");
                     
         }
-        vTaskDelay(1); // Add 1 tick delay (10 ms) so that current task does not starve idle task and trigger watchdog timer
+        vTaskDelay(3000); // Add 1 tick delay (10 ms) so that current task does not starve idle task and trigger watchdog timer
     }
 }
