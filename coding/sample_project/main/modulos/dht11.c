@@ -20,8 +20,9 @@ void dht11(void *pvParameters){
     }*/
     while(1){
         
-  dht_read_float_data(sen,GPIO_NUM_17,&hum , &temp);
-  //printf("Humidity: %.1f%% Temp: %.1fC\n", hum, temp);
+ dht_read_float_data(sen,GPIO_NUM_17,&hum , &temp);
+  
+  printf("Humidity: %.1f%% Temp: %.1fC\n", hum, temp);
   vTaskDelay(pdMS_TO_TICKS(500));}
   
 }
