@@ -20,6 +20,8 @@
 #include "hmi/font8x8_basic.h"
 #include "hmi/ssd1306.h"
 
+#include "communication/communication.h"
+
 
 // estructura definida en Display.h, interfaz inicial
 Screens screenSelected = S_WellcomeUi;
@@ -52,6 +54,7 @@ void app_main()
     xTaskCreate(soil_humidity,"soil_humidity",configMINIMAL_STACK_SIZE*3,NULL,5,NULL);*/
     xTaskCreate(dht11,"dht11",configMINIMAL_STACK_SIZE*3,NULL, 5, NULL);
     xTaskCreate(logUpdate,"logUpdate",configMINIMAL_STACK_SIZE*3,NULL,5,NULL);
+    xTaskCreate(communication,"communication",configMINIMAL_STACK_SIZE*3,NULL,5,NULL);
     /*while (1)
     {
         printf("Temperatura %fC \n",temp);
@@ -147,7 +150,7 @@ void variablesInit()
 void logUpdate(void *pvParameters){
     while (1)
     {
-    MainLog.temperatura=temp;
+    MainLog.temperatura=getTemp();
     vTaskDelay(pdMS_TO_TICKS(100));
     }
     

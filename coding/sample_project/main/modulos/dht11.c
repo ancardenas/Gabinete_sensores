@@ -3,6 +3,7 @@
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 #include <dht.h>
+//#include "dht11.h"
 float hum;
 float temp;
 dht_sensor_type_t sen =0;
@@ -25,4 +26,13 @@ void dht11(void *pvParameters){
   printf("Humidity: %.1f%% Temp: %.1fC\n", hum, temp);
   vTaskDelay(pdMS_TO_TICKS(500));}
   
+}
+
+float getTemp(){
+    return temp;
+}
+
+
+float getHum(){
+    return hum;
 }

@@ -61,7 +61,7 @@ uint8_t listenButtons(void) // esta función no retorna hasta que haya algo dife
         }
         adc_reading /= NO_OF_SAMPLES;
 
-        printf("adc_reading: %d\n", adc_reading); // filtering each probabilitie.
+       // printf("adc_reading: %d\n", adc_reading); // filtering each probabilitie.
         if (adc_reading > 4094)
         {
             buttonPressed = NoPressed;

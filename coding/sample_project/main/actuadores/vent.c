@@ -75,7 +75,7 @@ esp_err_t set_PWM(void)
     ledc_timer_config_t timer_conf_PWM = {0};
     timer_conf_PWM.speed_mode = LEDC_HIGH_SPEED_MODE;
     timer_conf_PWM.duty_resolution = LEDC_TIMER_10_BIT;
-    timer_conf_PWM.bit_num = LEDC_TIMER_10_BIT;
+    //timer_conf_PWM.bit_num = LEDC_TIMER_10_BIT;
     timer_conf_PWM.timer_num = LEDC_TIMER_0;
     timer_conf_PWM.freq_hz = 1000;
     ledc_timer_config(&timer_conf_PWM);
